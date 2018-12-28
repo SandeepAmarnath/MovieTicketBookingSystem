@@ -1,0 +1,181 @@
+
+/*Header*/
+
+.main-head{
+	background:#002233;
+	height:180px;
+	width:100%;
+	margin:-10px;
+	
+	
+	
+}
+header{
+	margin-right:-26px;
+}
+/* .grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+} */
+
+.logo{
+	width:150px;
+	padding-left:14px;
+	padding-top:10px;
+}
+#logo-desc{
+	
+	color:white;
+	font-family: 'Courgette', cursive;
+	padding:5px;
+	padding-left:10px;
+}
+.nav1{
+	float:right;
+	padding-right:38px;
+	padding-top:120px;
+	font-family: 'Slabo 27px', serif;
+}
+.nav2{
+	float:right;
+	padding-right:67px;
+	padding-top:68px;
+	font-family: 'Slabo 27px', serif;
+	
+	
+}
+.welcome{
+	color:white;
+}
+.nav1 ul li{
+	display:inline;
+	margin-right:30px;
+}
+
+.nav2 ul li{
+	display:inline;
+	margin-right:30px;
+}
+.nav1 ul li a{
+	display:inline;
+	text-decoration:none;
+	color:white;
+	
+	
+}
+.nav2 ul li a{
+	display:inline;
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+		
+}
+
+.nav2 ul li a:hover{
+	color:black;
+}
+.nav1 ul li a:hover{
+	color:black;
+}
+
+/*search bar*/
+input[type=text] {
+
+ 
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 6px;
+    font-size: 17px;
+}
+html { 
+        background: url('newbg.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+ }
+ 
+.footer {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   padding:20px;
+   width: 100%;
+   background-color: #002233;
+   color: white;
+   
+   padding-top:55px;
+   
+   font-family: 'Slabo 27px', serif;
+   margin-left: -14px;
+   margin-right: -17px;
+   margin-bottom: -13px;
+
+ 
+}
+.contact-about{
+	margin-bottom: 2px;
+	padding-bottom:10px;
+	/* margin-top: 23px; */
+}
+.contact-about li {
+	display:inline;
+	margin-right:30px;
+	float:right;
+	padding-bottom:10px;
+	
+}
+
+.contact-about li a{
+	text-decoration:none;
+	color:white;		
+}
+
+.footer li a:hover{
+	color:black;	
+	
+}
+
+
+
+.row{
+	width:80%;
+	max-width:1000px;
+	margin:auto;
+	padding-top:50px;
+	overflow:auto;
+}
+
+
+.row:last-of-type{
+	padding-bottom:50px;
+	
+}
+
+.col{
+	float:left;
+	margin:0% 10% 0 0;
+	width:150px;
+}
+
+.col4{width:50%}
+
+
+
+img{
+	border-radius:25px;
+
+}
+
+.popular{
+	color:white;
+	font-family: 'Calligraffitti', cursive;
+}
+
+
+
+
+
+

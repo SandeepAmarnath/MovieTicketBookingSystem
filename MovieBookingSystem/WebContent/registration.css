@@ -1,0 +1,189 @@
+/*Header*/
+
+html { 
+        background: url('newbg.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+ }
+ 
+
+header{
+	margin-right:-26px;
+}
+
+
+.main-head{
+	background:#002233;
+	height:200px;
+	width:100%;
+	margin:-10px;
+	
+}
+
+
+.logo{
+	width:150px;
+	padding-left:14px;
+	padding-top:10px;
+}
+img{
+	border-radius:25px;
+	margin-left:17px;
+
+}
+.nav1{
+	float:right;
+	padding-right:30px;
+	padding-top:120px;
+	font-family: 'Slabo 27px', serif;
+}
+.nav2{
+	float:right;
+	padding-top:70px;
+	font-family: 'Slabo 27px', serif;
+	
+}
+
+.nav1 ul li{
+	display:inline;
+	margin-right:30px;
+}
+
+.nav2 ul li{
+	display:inline;
+	margin-right:30px;
+}
+.nav1 ul li a{
+	display:inline;
+	text-decoration:none;
+	color:white;
+	
+	
+}
+.nav2 ul li a{
+	display:inline;
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+		
+}
+.nav1 ul li a:hover{
+	color:black;
+}
+
+.nav2 ul li a:hover{
+	color:black;
+}
+
+
+/*Container*/
+
+.row{
+	width:80%;
+	max-width:1000px;
+	margin:auto;
+	padding-top:50px;
+	overflow:auto;
+}
+
+.row:last-of-type{
+	padding-bottom:50px;
+	
+}
+
+.popular{
+	color:white;
+	font-family: 'Calligraffitti', cursive;
+	margin-left: 16px;
+    margin-top: -17px;
+}
+
+
+.works{
+	color:red;
+	font-family: 'Calligraffitti', cursive;
+	margin-left: 108px;
+    margin-top: -17px;
+}
+/*Form*/
+
+
+#formdiv{
+	
+   height:800px;
+   width:250px;
+   margin-left:180px;
+  
+}
+.in{
+	
+	height:40px;
+	width:314px;
+	padding:5px;
+	margin:10px;
+	margin-top:17px;
+	/* opacity:0.6; */
+    /* background-color:black;	 */
+	border-radius:10px;
+	font-family: 'Slabo 27px', serif;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+
+.reg {
+    color: black;
+    background:#D7FF33;
+    cursor:pointer;
+    font-size:1.1em;
+    width:325px;
+    border-radius:10px;
+	
+	
+}
+
+/*Footer*/
+.footer {
+   /* position: fixed;  */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #002233;
+   text-align: right;
+   padding: 19px;
+   margin:-10px;
+}
+
+.contact-about{
+	margin-bottom: -22px;
+}
+
+.contact-about li {
+	display:inline;
+	margin-right:30px;
+	float:right;
+	padding-bottom:10px;
+	
+}
+
+.contact-about li a{
+	text-decoration:none;
+	color:white;	
+    
+}
+
+.footer li a:hover{
+	color:black;	
+	
+}
+
+
+
+
+
+
