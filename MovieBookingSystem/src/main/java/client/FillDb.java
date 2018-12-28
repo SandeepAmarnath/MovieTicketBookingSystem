@@ -119,127 +119,503 @@ public class FillDb {
 			//Show
 			IShowDao showDao = DaoFactory.getShowDao();
 			
-			Show showJumanjiCarlton = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiInox = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiFamous = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiChilli = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiArcade = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiJackman = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
-			Show showJumanjiTed = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			//Jumanji shows
+			
+			Show showJumanjiCarltonToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiCarltonTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiCarltonDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showJumanjiCarltonToday);
+			showDao.create(showJumanjiCarltonTomorrow);
+			showDao.create(showJumanjiCarltonDayAfter);
+			
+			Set<Show> showsJumanjiCarlton = new HashSet<>();	
+			showsJumanjiCarlton.add(showJumanjiCarltonToday);
+			showsJumanjiCarlton.add(showJumanjiCarltonTomorrow);
+			showsJumanjiCarlton.add(showJumanjiCarltonDayAfter);
 			
 			
-			Show showDracullaCarlton = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
-			Show showDracullaInox = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
-			Show showDracullaArcade = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
-			Show showDracullaTed = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
+			Show showJumanjiInoxToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiInoxTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiInoxDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+						
+			showDao.create(showJumanjiInoxToday);
+			showDao.create(showJumanjiInoxTomorrow);
+			showDao.create(showJumanjiInoxDayAfter);
 			
-			Show showWolverineCarlton = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
-			Show showWolverineInox = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
-			Show showWolverineChilli = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
-			Show showWolverineJackman = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
-			Show showWolverineTed = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
-			Show showWolverineArcade = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Set<Show> showsJumanjiInox = new HashSet<>();
+			showsJumanjiInox.add(showJumanjiInoxToday);
+			showsJumanjiInox.add(showJumanjiInoxTomorrow);
+			showsJumanjiInox.add(showJumanjiInoxDayAfter);
 			
-			Show showAssasinsFamous = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
-			Show showAssasinsChilli = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
-			Show showAssasinsTed = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
-			
-			Show showIrobotCarlton = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			Show showIrobotInox = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			Show showIrobotFamous = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			Show showIrobotJackman = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			Show showIrobotTed = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			Show showIrobotArcade = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
-			
-			Show showAvengersInox = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());	
-			Show showAvengersFamous = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
-			Show showAvengersChilli = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
-			Show showAvengersTed = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
-			Show showAvengersArcade = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
+			Show showJumanjiFamousToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiFamousTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiFamousDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
 			
 			
-			showDao.create(showJumanjiCarlton);
-			showDao.create(showDracullaCarlton);
-			showDao.create(showWolverineCarlton);
-			showDao.create(showIrobotCarlton);
+			showDao.create(showJumanjiFamousToday);
+			showDao.create(showJumanjiFamousTomorrow);
+			showDao.create(showJumanjiFamousDayAfter);
 			
-			showDao.create(showJumanjiInox);
-			showDao.create(showDracullaInox);
-			showDao.create(showWolverineInox);
-			showDao.create(showIrobotInox);
-			showDao.create(showAvengersInox);
+			Set<Show> showsJumanjiFamous= new HashSet<>();
+			showsJumanjiFamous.add(showJumanjiFamousToday);
+			showsJumanjiFamous.add(showJumanjiFamousTomorrow);
+			showsJumanjiFamous.add(showJumanjiFamousDayAfter);
 			
-			showDao.create(showJumanjiFamous);
-			showDao.create(showAssasinsFamous);
-			showDao.create(showIrobotFamous);
-			showDao.create(showAvengersFamous);
+			Show showJumanjiChilliToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiChilliTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiChilliDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
 			
-			showDao.create(showJumanjiChilli);
-			showDao.create(showWolverineChilli);
-			showDao.create(showAssasinsChilli);
-			showDao.create(showAvengersChilli);
-			
-			showDao.create(showJumanjiArcade);
-			showDao.create(showDracullaArcade);
-			showDao.create(showWolverineArcade);
-			showDao.create(showIrobotArcade);
-			showDao.create(showAvengersArcade);
-			
-			showDao.create(showWolverineTed);
-			showDao.create(showAssasinsTed);
-			showDao.create(showIrobotTed);
-			showDao.create(showAvengersTed);
-			showDao.create(showJumanjiTed);
-			showDao.create(showDracullaTed);			
-			
-			showDao.create(showJumanjiJackman);
-			showDao.create(showWolverineJackman);
-			showDao.create(showIrobotJackman);
+			Set<Show> showsJumanjiChilli= new HashSet<>();
+			showsJumanjiChilli.add(showJumanjiChilliToday);
+			showsJumanjiChilli.add(showJumanjiChilliTomorrow);
+			showsJumanjiChilli.add(showJumanjiChilliDayAfter);
 			
 			
+			showDao.create(showJumanjiChilliToday);
+			showDao.create(showJumanjiChilliTomorrow);
+			showDao.create(showJumanjiChilliDayAfter);
+					
+			Show showJumanjiArcadeToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiArcadeTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiArcadeDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showJumanjiArcadeToday);
+			showDao.create(showJumanjiArcadeTomorrow);
+			showDao.create(showJumanjiArcadeDayAfter);
+			
+			Set<Show> showsJumanjiArcade= new HashSet<>();
+			showsJumanjiArcade.add(showJumanjiArcadeToday);
+			showsJumanjiArcade.add(showJumanjiArcadeTomorrow);
+			showsJumanjiArcade.add(showJumanjiArcadeDayAfter);
 			
 			
+			Show showJumanjiJackmanToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiJackmanTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiJackmanDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showJumanjiJackmanToday);
+			showDao.create(showJumanjiJackmanTomorrow);
+			showDao.create(showJumanjiJackmanDayAfter);
+			
+			Set<Show> showsJumanjiJackman= new HashSet<>();
+			showsJumanjiJackman.add(showJumanjiJackmanToday);
+			showsJumanjiJackman.add(showJumanjiJackmanTomorrow);
+			showsJumanjiJackman.add(showJumanjiJackmanDayAfter);
+			
+			
+			Show showJumanjiTedToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
+			Show showJumanjiTedTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showJumanjiTedDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showJumanjiTedToday);
+			showDao.create(showJumanjiTedTomorrow);
+			showDao.create(showJumanjiTedDayAfter);
+			
+			Set<Show> showsJumanjiTed= new HashSet<>();
+			showsJumanjiTed.add(showJumanjiTedToday);
+			showsJumanjiTed.add(showJumanjiTedTomorrow);
+			showsJumanjiTed.add(showJumanjiTedDayAfter);
+			
+//			Jumanji shows done
+			
+//			Dracula shows
+			
+			Show showDracullaCarltonToday = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
+			Show showDracullaCarltonTomorrow = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showDracullaCarltonDayAfter = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showDracullaCarltonToday);
+			showDao.create(showDracullaCarltonTomorrow);
+			showDao.create(showDracullaCarltonDayAfter);
+			
+			Set<Show> showsDraculaCarlton= new HashSet<>();
+			showsDraculaCarlton.add(showDracullaCarltonToday);
+			showsDraculaCarlton.add(showDracullaCarltonTomorrow);
+			showsDraculaCarlton.add(showDracullaCarltonDayAfter);
+			
+			Show showDracullaInoxToday = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
+			Show showDracullaInoxTomorrow = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showDracullaInoxDayAfter = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showDracullaInoxToday);
+			showDao.create(showDracullaInoxTomorrow);
+			showDao.create(showDracullaInoxDayAfter);
+			
+			Set<Show> showsDraculaInox= new HashSet<>();
+			showsDraculaInox.add(showDracullaInoxToday);
+			showsDraculaInox.add(showDracullaInoxTomorrow);
+			showsDraculaInox.add(showDracullaInoxDayAfter);
+			
+			Show showDracullaArcadeToday = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
+			Show showDracullaArcadeTomorrow = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showDracullaArcadeDayAfter = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showDracullaArcadeToday);
+			showDao.create(showDracullaArcadeTomorrow);
+			showDao.create(showDracullaArcadeDayAfter);
+			
+			Set<Show> showsDraculaArcade= new HashSet<>();
+			showsDraculaArcade.add(showDracullaArcadeToday);
+			showsDraculaArcade.add(showDracullaArcadeTomorrow);
+			showsDraculaArcade.add(showDracullaArcadeDayAfter);
+			
+			
+			Show showDracullaTedToday = new Show().setMovie(dracula).setShowTime(LocalDateTime.now());
+			Show showDracullaTedTomorrow = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showDracullaTedDayAfter = new Show().setMovie(dracula).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showDracullaTedToday);
+			showDao.create(showDracullaTedTomorrow);
+			showDao.create(showDracullaTedDayAfter);
+			
+			Set<Show> showsDraculaTed= new HashSet<>();
+			showsDraculaTed.add(showDracullaTedToday);
+			showsDraculaTed.add(showDracullaTedTomorrow);
+			showsDraculaTed.add(showDracullaTedDayAfter);
+//			Dracula shows done
+			
+//			Wolverine shows
+			
+			Show showWolverineCarltonToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineCarltonTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineCarltonDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineCarltonToday);
+			showDao.create(showWolverineCarltonTomorrow);
+			showDao.create(showWolverineCarltonDayAfter);
+			
+			
+			Set<Show> showsWolverineCarlton= new HashSet<>();
+			showsWolverineCarlton.add(showWolverineCarltonToday);
+			showsWolverineCarlton.add(showWolverineCarltonTomorrow);
+			showsWolverineCarlton.add(showWolverineCarltonDayAfter);
+			
+			
+			Show showWolverineInoxToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineInoxTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineInoxDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineInoxToday);
+			showDao.create(showWolverineInoxTomorrow);
+			showDao.create(showWolverineInoxDayAfter);
+			
+			Set<Show> showsWolverineInox= new HashSet<>();
+			showsWolverineInox.add(showWolverineInoxToday);
+			showsWolverineInox.add(showWolverineInoxTomorrow);
+			showsWolverineInox.add(showWolverineInoxDayAfter);
+			
+			Show showWolverineChilliToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineChilliTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineChilliDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineChilliToday);
+			showDao.create(showWolverineChilliTomorrow);
+			showDao.create(showWolverineChilliDayAfter);
+			
+			
+			Set<Show> showsWolverineChilli= new HashSet<>();
+			showsWolverineChilli.add(showWolverineChilliToday);
+			showsWolverineChilli.add(showWolverineChilliTomorrow);
+			showsWolverineChilli.add(showWolverineChilliDayAfter);
+			
+			Show showWolverineJackmanToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineJackmanTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineJackmanDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineJackmanToday);
+			showDao.create(showWolverineJackmanTomorrow);
+			showDao.create(showWolverineJackmanDayAfter);
+			
+			Set<Show> showsWolverineJackman= new HashSet<>();
+			showsWolverineJackman.add(showWolverineJackmanToday);
+			showsWolverineJackman.add(showWolverineJackmanTomorrow);
+			showsWolverineJackman.add(showWolverineJackmanDayAfter);
+			
+			Show showWolverineTedToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineTedTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineTedDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineTedToday);
+			showDao.create(showWolverineTedTomorrow);
+			showDao.create(showWolverineTedDayAfter);
+			
+			Set<Show> showsWolverineTed= new HashSet<>();
+			showsWolverineTed.add(showWolverineTedToday);
+			showsWolverineTed.add(showWolverineTedTomorrow);
+			showsWolverineTed.add(showWolverineTedDayAfter);
+			
+			
+			Show showWolverineArcadeToday = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now());
+			Show showWolverineArcadeTomorrow = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showWolverineArcadeDayAfter = new Show().setMovie(wolverine).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showWolverineArcadeToday);
+			showDao.create(showWolverineArcadeTomorrow);
+			showDao.create(showWolverineArcadeDayAfter);
+			
+			Set<Show> showsWolverineArcade= new HashSet<>();
+			showsWolverineArcade.add(showWolverineArcadeToday);
+			showsWolverineArcade.add(showWolverineArcadeTomorrow);
+			showsWolverineArcade.add(showWolverineArcadeDayAfter);
+			
+//			Wolverine shows done
+			
+//			Assasins shows
+			
+			Show showAssasinsFamousToday = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
+			Show showAssasinsFamousTomorrow = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAssasinsFamousDayAfter = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAssasinsFamousToday);
+			showDao.create(showAssasinsFamousTomorrow);
+			showDao.create(showAssasinsFamousDayAfter);
+			
+			Set<Show> showsAssasinsFamous= new HashSet<>();
+			showsAssasinsFamous.add(showAssasinsFamousToday);
+			showsAssasinsFamous.add(showAssasinsFamousTomorrow);
+			showsAssasinsFamous.add(showAssasinsFamousDayAfter);
+			
+			
+			Show showAssasinsChilliToday = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
+			Show showAssasinsChilliTomorrow = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAssasinsChilliDayAfter = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAssasinsChilliToday);
+			showDao.create(showAssasinsChilliTomorrow);
+			showDao.create(showAssasinsChilliDayAfter);
+			
+			Set<Show> showsAssasinsChilli= new HashSet<>();
+			showsAssasinsChilli.add(showAssasinsChilliToday);
+			showsAssasinsChilli.add(showAssasinsChilliTomorrow);
+			showsAssasinsChilli.add(showAssasinsChilliDayAfter);
+			
+			Show showAssasinsTedToday = new Show().setMovie(assasins).setShowTime(LocalDateTime.now());
+			Show showAssasinsTedTomorrow = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAssasinsTedDayAfter = new Show().setMovie(assasins).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAssasinsTedToday);
+			showDao.create(showAssasinsTedTomorrow);
+			showDao.create(showAssasinsTedDayAfter);
+			
+			Set<Show> showsAssasinsTed= new HashSet<>();
+			showsAssasinsTed.add(showAssasinsTedToday);
+			showsAssasinsTed.add(showAssasinsTedTomorrow);
+			showsAssasinsTed.add(showAssasinsTedDayAfter);
+			
+			
+			
+//			Assasins shows done
+			
+//			Irobot shows
+			
+			Show showIrobotCarltonToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotCarltonTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotCarltonDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotCarltonToday);
+			showDao.create(showIrobotCarltonTomorrow);
+			showDao.create(showIrobotCarltonDayAfter);
+			
+			Set<Show> showsIrobotCarlton= new HashSet<>();
+			showsIrobotCarlton.add(showIrobotCarltonToday);
+			showsIrobotCarlton.add(showIrobotCarltonTomorrow);
+			showsIrobotCarlton.add(showIrobotCarltonDayAfter);
+			
+			
+			Show showIrobotInoxToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotInoxTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotInoxDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotInoxToday);
+			showDao.create(showIrobotInoxTomorrow);
+			showDao.create(showIrobotInoxDayAfter);
+			
+			Set<Show> showsIrobotInox= new HashSet<>();
+			showsIrobotInox.add(showIrobotInoxToday);
+			showsIrobotInox.add(showIrobotInoxTomorrow);
+			showsIrobotInox.add(showIrobotInoxDayAfter);
+			
+			
+			
+			Show showIrobotFamousToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotFamousTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotFamousDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotFamousToday);
+			showDao.create(showIrobotFamousTomorrow);
+			showDao.create(showIrobotFamousDayAfter);
+			
+			Set<Show> showsIrobotFamous= new HashSet<>();
+			showsIrobotFamous.add(showIrobotFamousToday);
+			showsIrobotFamous.add(showIrobotFamousTomorrow);
+			showsIrobotFamous.add(showIrobotFamousDayAfter);
+			
+			
+			
+			
+			Show showIrobotJackmanToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotJackmanTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotJackmanDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotJackmanToday);
+			showDao.create(showIrobotJackmanTomorrow);
+			showDao.create(showIrobotJackmanDayAfter);
+			
+			Set<Show> showsIrobotJackman= new HashSet<>();
+			showsIrobotJackman.add(showIrobotJackmanToday);
+			showsIrobotJackman.add(showIrobotJackmanTomorrow);
+			showsIrobotJackman.add(showIrobotJackmanDayAfter);
+			
+			
+			Show showIrobotTedToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotTedTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotTedDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotTedToday);
+			showDao.create(showIrobotTedTomorrow);
+			showDao.create(showIrobotTedDayAfter);
+			
+			Set<Show> showsIrobotTed= new HashSet<>();
+			showsIrobotTed.add(showIrobotTedToday);
+			showsIrobotTed.add(showIrobotTedTomorrow);
+			showsIrobotTed.add(showIrobotTedDayAfter);
+			
+			Show showIrobotArcadeToday = new Show().setMovie(irobot).setShowTime(LocalDateTime.now());
+			Show showIrobotArcadeTomorrow = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showIrobotArcadeDayAfter = new Show().setMovie(irobot).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showIrobotArcadeToday);
+			showDao.create(showIrobotArcadeTomorrow);
+			showDao.create(showIrobotArcadeDayAfter);
+			
+			Set<Show> showsIrobotArcade= new HashSet<>();
+			showsIrobotArcade.add(showIrobotArcadeToday);
+			showsIrobotArcade.add(showIrobotArcadeTomorrow);
+			showsIrobotArcade.add(showIrobotArcadeDayAfter);
+			
+//			Irobot shows done
+			
+//			Avengers shows
+			
+			Show showAvengersInoxToday = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());	
+			Show showAvengersInoxTomorrow = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(1));	
+			Show showAvengersInoxDayAfter = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(2));	
+			
+			showDao.create(showAvengersInoxToday);
+			showDao.create(showAvengersInoxTomorrow);
+			showDao.create(showAvengersInoxDayAfter);
+			
+			Set<Show> showsAvengersInox= new HashSet<>();
+			showsAvengersInox.add(showAvengersInoxToday);
+			showsAvengersInox.add(showAvengersInoxTomorrow);
+			showsAvengersInox.add(showAvengersInoxDayAfter);
+			
+			
+			Show showAvengersFamousToday = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
+			Show showAvengersFamousTomorrow = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAvengersFamousDayAfter = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAvengersFamousToday);
+			showDao.create(showAvengersFamousTomorrow);
+			showDao.create(showAvengersFamousDayAfter);
+			
+			Set<Show> showsAvengerFamous= new HashSet<>();
+			showsAvengerFamous.add(showAvengersFamousToday);
+			showsAvengerFamous.add(showAvengersFamousTomorrow);
+			showsAvengerFamous.add(showAvengersFamousDayAfter);
+			
+			Show showAvengersChilliToday = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
+			Show showAvengersChilliTomorrow = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAvengersChilliDayAfter = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAvengersChilliToday);
+			showDao.create(showAvengersChilliTomorrow);
+			showDao.create(showAvengersChilliDayAfter);
+			
+			Set<Show> showsAvengerChilli= new HashSet<>();
+			showsAvengerChilli.add(showAvengersChilliToday);
+			showsAvengerChilli.add(showAvengersChilliTomorrow);
+			showsAvengerChilli.add(showAvengersChilliDayAfter);
+			
+			Show showAvengersTedToday = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
+			Show showAvengersTedTomorrow = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAvengersTedDayAfter = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(2));
+			
+			showDao.create(showAvengersTedToday);
+			showDao.create(showAvengersTedTomorrow);
+			showDao.create(showAvengersTedDayAfter);
+			
+			Set<Show> showsAvengerTed= new HashSet<>();
+			showsAvengerTed.add(showAvengersTedToday);
+			showsAvengerTed.add(showAvengersTedTomorrow);
+			showsAvengerTed.add(showAvengersTedDayAfter);
+			
+			
+			Show showAvengersArcadeToday = new Show().setMovie(avengers).setShowTime(LocalDateTime.now());
+			Show showAvengersArcadeTomorrow = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(1));
+			Show showAvengersArcadeDayAfter = new Show().setMovie(avengers).setShowTime(LocalDateTime.now().plusDays(2));	
+			
+			
+			showDao.create(showAvengersArcadeToday);
+			showDao.create(showAvengersArcadeTomorrow);
+			showDao.create(showAvengersArcadeDayAfter);
+			
+			Set<Show> showsAvengerArcade= new HashSet<>();
+			showsAvengerArcade.add(showAvengersArcadeToday);
+			showsAvengerArcade.add(showAvengersArcadeTomorrow);
+			showsAvengerArcade.add(showAvengersArcadeDayAfter);
+			
+			
+//			Avengers shows done
+			
+			
+			
+		
+					
+			
+
 			//Screen
 			
 			IScreenDao screenDao = DaoFactory.getScreenDao();
 			
-			Screen carltonCinemaOne = new Screen().setCapacity(80).setShowing(showJumanjiCarlton);
-			Screen carltonCinemaTwo = new Screen().setCapacity(65).setShowing(showDracullaCarlton);
-			Screen carltonCinemaFour = new Screen().setCapacity(95).setShowing(showWolverineCarlton);
-			Screen carltonCinemaThree = new Screen().setCapacity(130).setShowing(showIrobotCarlton);
+			Screen carltonCinemaOne = new Screen().setCapacity(80).setShowings(showsJumanjiCarlton);
+			Screen carltonCinemaTwo = new Screen().setCapacity(65).setShowings(showsDraculaCarlton);
+			Screen carltonCinemaFour = new Screen().setCapacity(95).setShowings(showsWolverineCarlton);
+			Screen carltonCinemaThree = new Screen().setCapacity(130).setShowings(showsIrobotCarlton);
 			
-			Screen inoxOne = new Screen().setCapacity(80).setShowing(showJumanjiInox);
-			Screen inoxTwo = new Screen().setCapacity(90).setShowing(showDracullaInox);
-			Screen inoxThree = new Screen().setCapacity(120).setShowing(showWolverineInox);
-			Screen inoxFour = new Screen().setCapacity(130).setShowing(showIrobotInox);
-			Screen inoxFive = new Screen().setCapacity(100).setShowing(showAvengersInox);
+			Screen inoxOne = new Screen().setCapacity(80).setShowings(showsJumanjiInox);
+			Screen inoxTwo = new Screen().setCapacity(90).setShowings(showsDraculaInox);
+			Screen inoxThree = new Screen().setCapacity(120).setShowings(showsWolverineInox);
+			Screen inoxFour = new Screen().setCapacity(130).setShowings(showsIrobotInox);
+			Screen inoxFive = new Screen().setCapacity(100).setShowings(showsAvengersInox);
 			
-			Screen famousPlayersOne = new Screen().setCapacity(110).setShowing(showJumanjiFamous);
-			Screen famousPlayersTwo = new Screen().setCapacity(85).setShowing(showAssasinsFamous);
-			Screen famousPlayersThree = new Screen().setCapacity(75).setShowing(showIrobotFamous);
-			Screen famousPlayersFour = new Screen().setCapacity(130).setShowing(showAvengersFamous);
+			Screen famousPlayersOne = new Screen().setCapacity(110).setShowings(showsJumanjiFamous);
+			Screen famousPlayersTwo = new Screen().setCapacity(85).setShowings(showsAssasinsFamous);
+			Screen famousPlayersThree = new Screen().setCapacity(75).setShowings(showsIrobotFamous);
+			Screen famousPlayersFour = new Screen().setCapacity(130).setShowings(showsAvengerFamous);
 
-			Screen chilliwackOne = new Screen().setCapacity(150).setShowing(showJumanjiChilli);
-			Screen chilliwackTwo = new Screen().setCapacity(140).setShowing(showWolverineChilli);
-			Screen chilliwackThree = new Screen().setCapacity(100).setShowing(showAssasinsChilli);
-			Screen chilliwackFour = new Screen().setCapacity(100).setShowing(showAvengersChilli);
+			Screen chilliwackOne = new Screen().setCapacity(150).setShowings(showsJumanjiChilli);
+			Screen chilliwackTwo = new Screen().setCapacity(140).setShowings(showsWolverineChilli);
+			Screen chilliwackThree = new Screen().setCapacity(100).setShowings(showsAssasinsChilli);
+			Screen chilliwackFour = new Screen().setCapacity(100).setShowings(showsAvengerChilli);
 			
-			Screen arcadeOne = new Screen().setCapacity(95).setShowing(showJumanjiArcade);
-			Screen arcadeTwo = new Screen().setCapacity(75).setShowing(showDracullaArcade);
-			Screen arcadeThree = new Screen().setCapacity(80).setShowing(showWolverineArcade);
-			Screen arcadeFour = new Screen().setCapacity(120).setShowing(showIrobotArcade);
-			Screen arcadeFive = new Screen().setCapacity(135).setShowing(showAvengersArcade);
+			Screen arcadeOne = new Screen().setCapacity(95).setShowings(showsJumanjiArcade);
+			Screen arcadeTwo = new Screen().setCapacity(75).setShowings(showsDraculaArcade);
+			Screen arcadeThree = new Screen().setCapacity(80).setShowings(showsWolverineArcade);
+			Screen arcadeFour = new Screen().setCapacity(120).setShowings(showsIrobotArcade);
+			Screen arcadeFive = new Screen().setCapacity(135).setShowings(showsAvengerArcade);
 			
-			Screen jackManOne = new Screen().setCapacity(105).setShowing(showJumanjiJackman);
-			Screen jackManTwo = new Screen().setCapacity(75).setShowing(showWolverineJackman);
-			Screen jackManThree = new Screen().setCapacity(60).setShowing(showIrobotJackman);
+			Screen jackManOne = new Screen().setCapacity(105).setShowings(showsJumanjiJackman);
+			Screen jackManTwo = new Screen().setCapacity(75).setShowings(showsWolverineJackman);
+			Screen jackManThree = new Screen().setCapacity(60).setShowings(showsIrobotJackman);
 			
-			Screen tedRogersOne = new Screen().setCapacity(125).setShowing(showJumanjiTed);
-			Screen tedRogersTwo = new Screen().setCapacity(115).setShowing(showDracullaTed);
-			Screen tedRogersThree = new Screen().setCapacity(90).setShowing(showWolverineTed);
-			Screen tedRogersFour = new Screen().setCapacity(80).setShowing(showAssasinsTed);
-			Screen tedRogersFive = new Screen().setCapacity(100).setShowing(showIrobotTed);
-			Screen tedRogersSix = new Screen().setCapacity(110).setShowing(showAvengersTed);
+			Screen tedRogersOne = new Screen().setCapacity(125).setShowings(showsJumanjiTed);
+			Screen tedRogersTwo = new Screen().setCapacity(115).setShowings(showsDraculaTed);
+			Screen tedRogersThree = new Screen().setCapacity(90).setShowings(showsWolverineTed);
+			Screen tedRogersFour = new Screen().setCapacity(80).setShowings(showsAssasinsTed);
+			Screen tedRogersFive = new Screen().setCapacity(100).setShowings(showsIrobotTed);
+			Screen tedRogersSix = new Screen().setCapacity(110).setShowings(showsAvengerTed);
 			
 			screenDao.create(carltonCinemaOne);
 			screenDao.create(carltonCinemaTwo);
@@ -320,8 +696,8 @@ public class FillDb {
 			
 			IBookingDao bookingDao = DaoFactory.getBookingDao();
 			
-			Booking bookJumanjiInox = new Booking().setNumTickets(2).setPrice(discounted1).setShow(showJumanjiInox).setUser(sandeep);
-			Booking bookDraculaArcade = new Booking().setNumTickets(2).setPrice(enhanced1).setShow(showDracullaArcade).setUser(sandeep);
+			Booking bookJumanjiInox = new Booking().setNumTickets(2).setPrice(discounted1).setShow(showJumanjiInoxToday).setUser(sandeep);
+			Booking bookDraculaArcade = new Booking().setNumTickets(2).setPrice(enhanced1).setShow(showDracullaArcadeTomorrow).setUser(sandeep);
 			
 			bookingDao.create(bookJumanjiInox);
 			bookingDao.create(bookDraculaArcade);
