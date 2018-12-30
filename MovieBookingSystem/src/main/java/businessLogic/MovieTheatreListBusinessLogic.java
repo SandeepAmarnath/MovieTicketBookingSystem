@@ -18,14 +18,10 @@ import model.Movie;
 
 public class MovieTheatreListBusinessLogic {
 	
-//	
+	
 //	public static void main(String[] args) {
-//		System.out.println(getShowTime("Jumanji","INOX"));
-//	}
-//	public List<Movie> getMovies() {
-//		MovieJpaDao movieJpaDao = new MovieJpaDao();
-//		List<Movie> allMovies = movieJpaDao.readAll();
-//		return allMovies;
+//		
+//		System.out.println(getPriceListNonPeak("INOX"));
 //		
 //	}
 	
@@ -71,7 +67,6 @@ public class MovieTheatreListBusinessLogic {
 		}
 		
 
-		
 		em.getTransaction().commit();
 		em.close();
 		
@@ -110,6 +105,46 @@ public class MovieTheatreListBusinessLogic {
 		}
 		return showTimes;
 		
-
 	}
+	
+	public HashMap<String,ArrayList<String>> getPriceListNonPeak(String theatre) {
+		
+		HashMap<String,ArrayList<String>> theatrePrices=new HashMap<String,ArrayList<String>>(); 
+		
+		List<String> prices = new ArrayList<String>();
+		EntityManager em = EMFactory.getEntityManager();
+		em.getTransaction().begin();
+		Query q = em.createNativeQuery("select t.THEATRE_NAME,p.ISDISCOUNTED,p.ISENHANCED,p.PRICE from price p "
+										+ "join theatre t on t.theatre_id= p.theatre_id "
+										+ "where ISPEAKRATE='F'");
+		List<Object[]> all = q.getResultList();
+		for (Object[] object : all) {
+			ArrayList<String> strArray = new ArrayList<String>();
+			
+//			System.out.println((String)object[0]+"   "+((Character)object[1]).toString()+" "
+//								+ "        "+((Character)object[2]).toString()+"      "+((Character)object[3]).toString()+"      "+((BigDecimal)object[4]).toString());
+
+		
+		
+			
+			if (! theatrePrices.containsKey((String)object[0])) {
+				theatrePrices.put((String)object[0], strArray);
+				strArray.add(((Character)object[1]).toString());
+				strArray.add(((Character)object[2]).toString());
+				strArray.add(((BigDecimal)object[3]).toString());
+			}
+			
+			else {
+				theatrePrices.get((String)object[0]).add(((Character)object[1]).toString());
+				theatrePrices.get((String)object[0]).add(((Character)object[2]).toString());
+				theatrePrices.get((String)object[0]).add(((BigDecimal)object[3]).toString());
+			}
+			
+		}
+		return theatrePrices;
+	}
+	
+	
+	
+	
 }

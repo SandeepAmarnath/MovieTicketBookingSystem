@@ -88,9 +88,9 @@ public class FillDb {
 			//Carlton
 			
 			Price enhPkCarlt = new Price().setPrice(50).setDiscounted(false).setPeakRate(true).setEnhanced(true);
-			Price dscPkCarlt = new Price().setPrice(50).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscCarlt = new Price().setPrice(90).setDiscounted(false).setPeakRate(false).setEnhanced(false);
-			Price enhCarlt = new Price().setPrice(70).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			Price dscPkCarlt = new Price().setPrice(40).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscCarlt = new Price().setPrice(12).setDiscounted(true).setPeakRate(false).setEnhanced(false);
+			Price enhCarlt = new Price().setPrice(16).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkCarlt);
 			priceDao.create(dscPkCarlt);
@@ -108,7 +108,7 @@ public class FillDb {
 			
 			Price enhPkInox = new Price().setPrice(60).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkInox = new Price().setPrice(45).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscInox= new Price().setPrice(20).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscInox= new Price().setPrice(20).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhInox = new Price().setPrice(35).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkInox);
@@ -128,7 +128,7 @@ public class FillDb {
 			
 			Price enhPkFp = new Price().setPrice(55).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkFp = new Price().setPrice(40).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscFp= new Price().setPrice(10).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscFp= new Price().setPrice(10).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhFp = new Price().setPrice(25).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkFp);
@@ -147,7 +147,7 @@ public class FillDb {
 			
 			Price enhPkCin = new Price().setPrice(48).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkCin = new Price().setPrice(42).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscCin= new Price().setPrice(12).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscCin= new Price().setPrice(12).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhCin = new Price().setPrice(18).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkCin);
@@ -166,7 +166,7 @@ public class FillDb {
 			
 			Price enhPkTed = new Price().setPrice(35).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkTed = new Price().setPrice(25).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscTed= new Price().setPrice(10).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscTed= new Price().setPrice(10).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhTed = new Price().setPrice(15).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			
@@ -186,7 +186,7 @@ public class FillDb {
 			
 			Price enhPkJack = new Price().setPrice(48).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkJack = new Price().setPrice(42).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscJack= new Price().setPrice(12).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscJack= new Price().setPrice(12).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhJack = new Price().setPrice(18).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkJack);
@@ -205,7 +205,7 @@ public class FillDb {
 			
 			Price enhPkGal = new Price().setPrice(60).setDiscounted(false).setPeakRate(true).setEnhanced(true);
 			Price dscPkGal = new Price().setPrice(50).setDiscounted(true).setPeakRate(true).setEnhanced(false);
-			Price dscGal= new Price().setPrice(20).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price dscGal= new Price().setPrice(20).setDiscounted(true).setPeakRate(false).setEnhanced(false);
 			Price enhGal = new Price().setPrice(25).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
 			priceDao.create(enhPkGal);

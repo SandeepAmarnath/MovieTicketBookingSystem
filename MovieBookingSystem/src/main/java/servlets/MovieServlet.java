@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import businessLogic.MovieTheatreListBusinessLogic;
 import dao.jpa.MovieJpaDao;
 import model.Movie;
+import model.Theatre;
 
 /**
  * Servlet implementation class MovieServlet
@@ -67,6 +68,7 @@ public class MovieServlet extends HttpServlet {
 		
 		
 		
+		
 		request.getRequestDispatcher("movieTheaterList.jsp").forward(request, response);
 	}
 
@@ -90,13 +92,19 @@ public class MovieServlet extends HttpServlet {
 			
 				
 			List<Timestamp> showtimes = mtbl.getShowTime(movie, theater);
-			System.out.println(showtimes);
+			
+			
+			HashMap<String,ArrayList<String>>  theatrePrices = mtbl.getPriceListNonPeak(theater);
+			
+			
+						
 			
 			request.setAttribute("username", username);
 			request.setAttribute("movie", movie);
 			request.setAttribute("seats", seats);
 			request.setAttribute("theater", theater);
 			request.setAttribute("showtime", showtimes);
+			
 			request.getRequestDispatcher("bookingConfirmation.jsp").forward(request, response);
 			
 	}
