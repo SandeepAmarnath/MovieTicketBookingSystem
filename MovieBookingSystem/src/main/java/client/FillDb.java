@@ -85,18 +85,140 @@ public class FillDb {
 			
 			IPriceDao priceDao = DaoFactory.getPriceDao();
 			
-			Price discounted1 = new Price().setPrice(30).setDiscounted(true).setPeakRate(false).setEnhanced(false);
-			Price enhanced1 = new Price().setPrice(50).setDiscounted(false).setPeakRate(false).setEnhanced(true);
-			Price peakrateWithEnhanced1 = new Price().setPrice(90).setDiscounted(false).setPeakRate(true).setEnhanced(true);
-			Price peakrate1 = new Price().setPrice(70).setDiscounted(false).setPeakRate(true).setEnhanced(false);
-			Price discountedWithEnhanced1 = new Price().setPrice(35).setDiscounted(true).setPeakRate(false).setEnhanced(true);
+			//Carlton
 			
-			priceDao.create(discounted1);
-			priceDao.create(enhanced1);
-			priceDao.create(peakrateWithEnhanced1);
-			priceDao.create(peakrate1);
-			priceDao.create(discountedWithEnhanced1);	
+			Price enhPkCarlt = new Price().setPrice(50).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkCarlt = new Price().setPrice(50).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscCarlt = new Price().setPrice(90).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhCarlt = new Price().setPrice(70).setDiscounted(false).setPeakRate(false).setEnhanced(true);
 			
+			priceDao.create(enhPkCarlt);
+			priceDao.create(dscPkCarlt);
+			priceDao.create(dscCarlt);
+			priceDao.create(enhCarlt);
+			
+			Set<Price> pricesCarlton = new HashSet<>();
+			
+			pricesCarlton.add(enhPkCarlt);
+			pricesCarlton.add(dscPkCarlt);
+			pricesCarlton.add(dscCarlt);
+			pricesCarlton.add(enhCarlt);
+			
+			//Inox
+			
+			Price enhPkInox = new Price().setPrice(60).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkInox = new Price().setPrice(45).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscInox= new Price().setPrice(20).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhInox = new Price().setPrice(35).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			priceDao.create(enhPkInox);
+			priceDao.create(dscPkInox);
+			priceDao.create(dscInox);
+			priceDao.create(enhInox);
+			
+			Set<Price> pricesInox = new HashSet<>();
+			
+			pricesInox.add(enhPkInox);
+			pricesInox.add(dscPkInox);
+			pricesInox.add(dscInox);
+			pricesInox.add(enhInox);
+			
+			
+			//FP
+			
+			Price enhPkFp = new Price().setPrice(55).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkFp = new Price().setPrice(40).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscFp= new Price().setPrice(10).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhFp = new Price().setPrice(25).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			priceDao.create(enhPkFp);
+			priceDao.create(dscPkFp);
+			priceDao.create(dscFp);
+			priceDao.create(enhFp);
+			
+			Set<Price> pricesFp = new HashSet<>();
+			
+			pricesFp.add(enhPkFp);
+			pricesFp.add(dscPkFp);
+			pricesFp.add(dscFp);
+			pricesFp.add(enhFp);
+			
+			//Cineplex
+			
+			Price enhPkCin = new Price().setPrice(48).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkCin = new Price().setPrice(42).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscCin= new Price().setPrice(12).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhCin = new Price().setPrice(18).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			priceDao.create(enhPkCin);
+			priceDao.create(dscPkCin);
+			priceDao.create(dscCin);
+			priceDao.create(enhCin);
+			
+			Set<Price> pricesCineplex = new HashSet<>();
+			
+			pricesCineplex.add(enhPkCin);
+			pricesCineplex.add(dscPkCin);
+			pricesCineplex.add(dscCin);
+			pricesCineplex.add(enhCin);
+			
+			// Ted
+			
+			Price enhPkTed = new Price().setPrice(35).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkTed = new Price().setPrice(25).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscTed= new Price().setPrice(10).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhTed = new Price().setPrice(15).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			
+			priceDao.create(enhPkTed);
+			priceDao.create(dscPkTed);
+			priceDao.create(dscTed);
+			priceDao.create(enhTed);
+			
+			Set<Price> pricesTed = new HashSet<>();
+			
+			pricesTed.add(enhPkTed);
+			pricesTed.add(dscPkTed);
+			pricesTed.add(dscTed);
+			pricesTed.add(enhTed);
+			
+			//Jack
+			
+			Price enhPkJack = new Price().setPrice(48).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkJack = new Price().setPrice(42).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscJack= new Price().setPrice(12).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhJack = new Price().setPrice(18).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			priceDao.create(enhPkJack);
+			priceDao.create(dscPkJack);
+			priceDao.create(dscJack);
+			priceDao.create(enhJack);
+			
+			Set<Price> pricesJack = new HashSet<>();
+			
+			pricesJack.add(enhPkJack);
+			pricesJack.add(dscPkJack);
+			pricesJack.add(dscJack);
+			pricesJack.add(enhJack);
+			
+			// Galaxy
+			
+			Price enhPkGal = new Price().setPrice(60).setDiscounted(false).setPeakRate(true).setEnhanced(true);
+			Price dscPkGal = new Price().setPrice(50).setDiscounted(true).setPeakRate(true).setEnhanced(false);
+			Price dscGal= new Price().setPrice(20).setDiscounted(false).setPeakRate(false).setEnhanced(false);
+			Price enhGal = new Price().setPrice(25).setDiscounted(false).setPeakRate(false).setEnhanced(true);
+			
+			priceDao.create(enhPkGal);
+			priceDao.create(dscPkGal);
+			priceDao.create(dscGal);
+			priceDao.create(enhGal);
+			
+			Set<Price> pricesGalaxy = new HashSet<>();
+			
+			pricesGalaxy.add(enhPkGal);
+			pricesGalaxy.add(dscPkGal);
+			pricesGalaxy.add(dscGal);
+			pricesGalaxy.add(enhGal);
 			
 			
 			// Movie
@@ -138,15 +260,21 @@ public class FillDb {
 			Show showJumanjiInoxToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
 			Show showJumanjiInoxTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
 			Show showJumanjiInoxDayAfter = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(2));
+			Show showJumanjiInoxDayFour = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(3));
+			Show showJumanjiInoxDayFive = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(4));
 						
 			showDao.create(showJumanjiInoxToday);
 			showDao.create(showJumanjiInoxTomorrow);
 			showDao.create(showJumanjiInoxDayAfter);
+			showDao.create(showJumanjiInoxDayFour);
+			showDao.create(showJumanjiInoxDayFive);
 			
 			Set<Show> showsJumanjiInox = new HashSet<>();
 			showsJumanjiInox.add(showJumanjiInoxToday);
 			showsJumanjiInox.add(showJumanjiInoxTomorrow);
 			showsJumanjiInox.add(showJumanjiInoxDayAfter);
+			showsJumanjiInox.add(showJumanjiInoxDayFour);
+			showsJumanjiInox.add(showJumanjiInoxDayFive);
 			
 			Show showJumanjiFamousToday = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now());
 			Show showJumanjiFamousTomorrow = new Show().setMovie(jumanji).setShowTime(LocalDateTime.now().plusDays(1));
@@ -672,13 +800,13 @@ public class FillDb {
 			
 			ITheatreDao theatreDao = DaoFactory.getTheatreDao();
 			
-			Theatre carltonCinema = new Theatre().setAddress("20 Carlton St, Toronto, ON M5B 2H5").setCity(toronto).setTheatreName("Carlton Cinemas").setPrice(discounted1).setScreens(carltonCinemaScreens);
-			Theatre inox = new Theatre().setAddress("501 Brunswick street, Halifax").setCity(halifax).setTheatreName("INOX").setPrice(enhanced1).setScreens(inoxScreens);
-			Theatre famousPlayers = new Theatre().setAddress("2190 Yonge St, Toronto, ON M4S 2C6").setCity(windsor).setTheatreName("Famous Players").setPrice(peakrateWithEnhanced1).setScreens(famousPlayersScreens);
-			Theatre chilliwack = new Theatre().setAddress("8249 Eagle Landing Parkway, Chilliwack, BC, V2P 7K6").setCity(vancouver).setTheatreName("Galaxy Cinemas Chilliwack").setPrice(peakrate1).setScreens(chilliwackScreens);
-			Theatre arcade = new Theatre().setAddress("12 Bedford Road, Manitoba").setCity(manitoba).setTheatreName("Cineplex Arcade").setPrice(discountedWithEnhanced1).setScreens(arcadeScreens);
-			Theatre jackMan = new Theatre().setAddress("317 Dundas St W, Toronto, ON M5T 1G4").setCity(toronto).setTheatreName("Jackman Hall").setPrice(discountedWithEnhanced1).setScreens(jackManScreens);
-			Theatre tedRogers = new Theatre().setAddress("12 Bedford Road, Manitoba").setCity(manitoba).setTheatreName("Ted Rogers Cinemas").setPrice(discountedWithEnhanced1).setScreens(tedRogersScreens);
+			Theatre carltonCinema = new Theatre().setAddress("20 Carlton St, Toronto, ON M5B 2H5").setCity(toronto).setTheatreName("Carlton Cinemas").setPrices(pricesCarlton).setScreens(carltonCinemaScreens);
+			Theatre inox = new Theatre().setAddress("501 Brunswick street, Halifax").setCity(halifax).setTheatreName("INOX").setPrices(pricesInox).setScreens(inoxScreens);
+			Theatre famousPlayers = new Theatre().setAddress("2190 Yonge St, Toronto, ON M4S 2C6").setCity(windsor).setTheatreName("Famous Players").setPrices(pricesFp).setScreens(famousPlayersScreens);
+			Theatre chilliwack = new Theatre().setAddress("8249 Eagle Landing Parkway, Chilliwack, BC, V2P 7K6").setCity(vancouver).setTheatreName("Galaxy Cinemas Chilliwack").setPrices(pricesGalaxy).setScreens(chilliwackScreens);
+			Theatre arcade = new Theatre().setAddress("12 Bedford Road, Manitoba").setCity(manitoba).setTheatreName("Cineplex Arcade").setPrices(pricesCineplex).setScreens(arcadeScreens);
+			Theatre jackMan = new Theatre().setAddress("317 Dundas St W, Toronto, ON M5T 1G4").setCity(toronto).setTheatreName("Jackman Hall").setPrices(pricesJack).setScreens(jackManScreens);
+			Theatre tedRogers = new Theatre().setAddress("12 Bedford Road, Manitoba").setCity(manitoba).setTheatreName("Ted Rogers Cinemas").setPrices(pricesTed).setScreens(tedRogersScreens);
 			
 			
 			theatreDao.create(carltonCinema);
@@ -696,8 +824,8 @@ public class FillDb {
 			
 			IBookingDao bookingDao = DaoFactory.getBookingDao();
 			
-			Booking bookJumanjiInox = new Booking().setNumTickets(2).setPrice(discounted1).setShow(showJumanjiInoxToday).setUser(sandeep);
-			Booking bookDraculaArcade = new Booking().setNumTickets(2).setPrice(enhanced1).setShow(showDracullaArcadeTomorrow).setUser(sandeep);
+			Booking bookJumanjiInox = new Booking().setNumTickets(2).setPrice(dscInox).setShow(showJumanjiInoxToday).setUser(sandeep);
+			Booking bookDraculaArcade = new Booking().setNumTickets(2).setPrice(enhCin).setShow(showDracullaArcadeTomorrow).setUser(sandeep);
 			
 			bookingDao.create(bookJumanjiInox);
 			bookingDao.create(bookDraculaArcade);

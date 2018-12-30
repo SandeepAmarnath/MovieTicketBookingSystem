@@ -89,15 +89,17 @@
 				<c:forEach var="movie" items="${movies}">
 				<form method="POST" action="movies">
 					<tr>
-					<td><input class="hidebg" name="movie" value="${movie.getName()}" readonly/></td>	
+					<td><input class="hidebg moviename" name="movie" value="${movie.getName()}" readonly/></td>	
 					<td><input class="hidebg" name="runtime" value="${movie.getRuntime()}" readonly/></td>	
 					<td><input class="hidebg" name="rating" value="${movie.getRating()}" readonly/></td>
 					<td><input class="hidebg" name="cinerating" value="${movie.getCinRating()}" readonly/></td>
 					<td>
 					
 					<div class="styled-select green rounded">
-					<select name="theatre" id="opt" onchange="theaterSelect();">
-					<c:forEach var="theatre" items="${theatres.get(movie.getName())}">		
+					<select name="theatre" class="theatrename">
+						 <option>SELECT THEATRE</option>
+					<c:forEach var="theatre" items="${theatres.get(movie.getName())}">	
+						
 						<option><c:out value = "${theatre}" /></option>
 					</c:forEach>
 					</select>
@@ -105,14 +107,25 @@
 					
 					</td>	
 					<td><input class="seat" type="number" name="seat" min="1" max="100" required/></td>
-					<!-- <td><button class="button button2">Confirm</button></td> -->
-					<td><input class="datetime" required/></td>
+					
+					<td>
+					<div class="styled-select green rounded">
+					<select class="showtimes" name="shows" >
+						<option>SHOWS</option>
+					<c:forEach var="show" items="${showtimes}">	
+						
+						<option><c:out value = "${show}" /></option>
+					</c:forEach>
+					</select>
+					</div>
+					</td>
+					
 					<td><input type="submit" class="button button2" value="Confirm"/></td>
 					</tr>
 					 </form>
 				</c:forEach>
 			 
-			
+		
 			<!-- <script>
 				/* This gives movie name in the row */
 				$("button").click(function(){
@@ -155,12 +168,35 @@
 
 
 <!--Initializing-->
-<script>
+<!-- <script>
 	$(".datetime").datetimepicker({
 		step: 15
 	});
 	
-</script>
+</script> -->
+ 
+<!-- Try this AJAX -->
+<!--  <script>
+						$(document).ready(function(){
+							$('.theatrename').click(function(){
+								var theatre = $('.theatrename').val();
+								var movie = $('.moviename').val();
+								
+								$.ajax({
+									
+									data:{theatre:theatre,
+										  movie:movie
+										  },
+									type:'GET',
+									url:'movies',
+									success: function(result){
+										 $('.showtimes').html(result);
+									} 
+								});
+							});
+						});
+					
+					</script> -->
  
  
  </body>

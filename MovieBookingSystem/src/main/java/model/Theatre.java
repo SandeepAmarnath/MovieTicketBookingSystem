@@ -110,7 +110,13 @@ public class Theatre implements IStorable {
 	public Set<Price> getPrices() {
 		return prices;
 	}
-
+	
+	//Added later
+	public Theatre setPrices(Set<Price> prices) {
+		this.prices = prices;
+		return this;
+	}
+	
 	public Theatre setPrice(Price price) {
 		this.prices.add(price);
 		return this;

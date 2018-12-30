@@ -62,17 +62,36 @@
 					<td>Username</td>
 					<td>${username}</td>
 				</tr>
-					<tr>
+				<tr>
 					<td>Movie</td>
 					<td>${movie}</td>
 				</tr>
-					<tr>
+				<tr>
 					<td>Theater</td>
 					<td>${theater}</td>
 				</tr>
-					<tr>
+				<tr>
 					<td>Seats</td>
 					<td>${seats}</td>
+				</tr>
+				<%-- <tr>
+					<td>Show Time</td>
+					<td>${showtime}</td>
+				</tr> --%>
+				
+				<tr>
+					<td>Show Time</td>
+					<td>
+					<div class="styled-select green rounded">
+					<select class="showtimes" name="shows" >
+						<option>SHOWS</option>
+					<c:forEach var="show" items="${showtime}">	
+						
+						<option><c:out value = "${show}" /></option>
+					</c:forEach>
+					</select>
+					</div>
+				</td>
 				</tr>
 				
 				
