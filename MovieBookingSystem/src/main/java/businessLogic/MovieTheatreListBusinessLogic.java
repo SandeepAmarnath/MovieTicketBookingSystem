@@ -30,9 +30,6 @@ public class MovieTheatreListBusinessLogic {
 		HashMap<String,ArrayList<String>> movieTheatre=new HashMap<String,ArrayList<String>>(); 
 		
 		
-		
-		
-		
 		EntityManager em = EMFactory.getEntityManager();
 		em.getTransaction().begin();
 		
@@ -46,7 +43,7 @@ public class MovieTheatreListBusinessLogic {
 		
 		for (Object[] objects : all) {
 			ArrayList<String> strArray = new ArrayList<String>();
-			System.err.println((String)objects[0]+ "      "+(String)objects[1]);
+//			System.err.println((String)objects[0]+ "      "+(String)objects[1]);
 			
 			
 			
@@ -143,8 +140,5 @@ public class MovieTheatreListBusinessLogic {
 		}
 		return theatrePrices;
 	}
-	
-	
-	
 	
 }

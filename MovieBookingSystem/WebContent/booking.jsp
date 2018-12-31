@@ -54,14 +54,14 @@
 	
 		<div class="row">
 			<div class="col2">
-				<h1 class="popular register-here">Booking Details</h1>
+				<h1 class="popular register-here">Booking</h1>
 			</div>	
 		</div>
 		
 		
 	<div class="movieborder">
 		
-		<form method="POST" action = "booking">
+		<form method="" action = "">
 			<table>
 				<tr>
 					<td>Username</td>
@@ -69,59 +69,42 @@
 				</tr>
 				<tr>
 					<td>Movie</td>
-					<td><input type="hidden" name="movie" value="${movie}"/>${movie}</td>
+					<td>${movie}</td>
 				</tr>
 				<tr>
 					<td>Theater</td>
-					<td><input type="hidden" name="theatre" value="${theater}"/>${theater}</td>
+					<td>${theatre}</td>
 				</tr>
 				<tr>
 					<td>Seats</td>
-					<td><input type="hidden" name="seats" value="${seats}"/>${seats}</td>
+					<td>${seats}</td>
 				</tr>
 				
 				<tr>
 					<td>Show Time</td>
-					<td>
-					<div class="styled-select green rounded">
-					<select id="showtimes" name="shows" >
-						<option>Select Show</option>
-					<c:forEach var="show" items="${showtime}">	
-						
-						<option><c:out value = "${show}" /></option>
-					</c:forEach>
-					</select>
-					</div>
-				</td>
+					<td>${showtimes}</td>
 				</tr>
 				
 				<tr>
 					<td>Type</td>
-					<td>
-					<div class="styled-select green rounded">
-					
-					<select id = "priceid" name="priceType">
-						<option>Economy</option>
-						<option>Enhanced</option>
-						
-					</select>
-					
-					</div>
-					</td>
+					<td>${priceType}</td>
 				</tr>
-				
 				
 				<tr>
-				
+					<td>Price</td>	
+					<td>${cp}</td>	
 				</tr>
+									
+				
+				
+				
+				
 			</table>
-			
-				<br>
-				<input class="button button2" id="testprice" type="submit" name="button" value="Proceed" />
 		</form>
 	</div>
 		
 				
+
 </div>
 	
 	<footer class="footer">
@@ -133,38 +116,7 @@
 		</div>
 	
 	</footer>
- 					<!-- AJAX TRY -->
- 					 <!-- <script>
-						$(document).ready(function(){
-							$('#testprice').click(function(){
-								
-								var price = $('#priceid').val();
-								var showtimes = $("#showtimes").val();
-								var movie = $("#movie").html();
-								var theatre = $("#theatre").html();
-								var seats = $("#seats").html();
-								
-								$.ajax({
-									
-									data:{price:price,
-										  showtimes:showtimes,
-										  movie:movie,
-										  theatre:theatre,
-										  seats:seats,
-										  
-										  },
-									type:'GET',
-									url:'booking',
-									success: function(data){
-										 $('#testprice').html(data);
-									
-									} 
-								});
-							});
-						});
-					
-					</script> -->
- 
+
  
  
  </body>

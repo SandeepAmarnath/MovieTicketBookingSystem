@@ -1,0 +1,239 @@
+/*Header*/
+
+html { 
+        background: url('newbg.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+ }
+ 
+
+header{
+	margin-right:-26px;
+}
+
+
+.main-head{
+	background:#002233;
+	height:180px;
+	width:100%;
+	margin:-10px;
+	
+	
+	
+}
+
+.logo{
+	width:150px;
+	padding-left:14px;
+	padding-top:10px;
+}
+img{
+	border-radius:25px;
+	margin-left:17px;
+
+}
+.nav1{
+	float:right;
+	padding-right:30px;
+	padding-top:120px;
+	font-family: 'Slabo 27px', serif;
+}
+.nav2{
+	float:right;
+	padding-top:70px;
+	font-family: 'Slabo 27px', serif;
+	
+}
+
+.nav1 ul li{
+	display:inline;
+	margin-right:30px;
+}
+
+.nav2 ul li{
+	display:inline;
+	margin-right:30px;
+}
+.nav1 ul li a{
+	display:inline;
+	text-decoration:none;
+	color:white;
+	
+	
+}
+.nav2 ul li a{
+	display:inline;
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+		
+}
+.nav1 ul li a:hover{
+	color:black;
+}
+
+.nav2 ul li a:hover{
+	color:black;
+}
+
+
+/*Container*/
+
+.row{
+	width:80%;
+	max-width:1000px;
+	margin:auto;
+	padding-top:50px;
+	overflow:auto;
+}
+
+.row:last-of-type{
+	padding-bottom:50px;
+	
+}
+
+.popular{
+	color:white;
+	font-family: 'Calligraffitti', cursive;
+	margin-left: 108px;
+    margin-top: -17px;
+}
+
+
+/*Form*/
+
+
+
+/*Footer*/
+.footer {
+   /* position: fixed;  */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #002233;
+   text-align: right;
+   padding: 19px;
+   margin:-10px;
+}
+
+.contact-about{
+	margin-bottom: -22px;
+}
+
+.contact-about li {
+	display:inline;
+	margin-right:30px;
+	float:right;
+	padding-bottom:10px;
+	
+}
+
+.contact-about li a{
+	text-decoration:none;
+	color:white;	
+    
+}
+
+.footer li a:hover{
+	color:black;	
+	
+}
+
+
+
+
+
+
+/*new additions to registration*/
+
+/*movie list border*/
+.movieborder{
+   height:700px;
+   width:900px;
+   margin-left:180px;
+   /* background:white; */
+   
+}
+li,a{
+	color:white;
+	text-decoration:none;
+	height:40px;
+	widht:50px;
+	font-size:18px;
+	
+	
+}
+/*table*/
+/* table{
+	color:white;
+} */
+
+table {
+  font-family: arial, sans-serif;
+ /*  border-collapse: collapse;  */
+  color:white;
+  width: 50%;
+  
+}
+.button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:20px;
+}
+td,th {
+  width:200px;
+  border: 1px solid  #dddddd ;
+  text-align: centre;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+rounded { margin: 20px; }
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 76% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 150px;
+}
+
+
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 10px;
+}
+
+.green   { background-color: #779126; }
+
+ .green select   { 
+ color:white; 
+ 
+ } 
+
+.styled-select select {
+   background:  #779126;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 139px;
+}

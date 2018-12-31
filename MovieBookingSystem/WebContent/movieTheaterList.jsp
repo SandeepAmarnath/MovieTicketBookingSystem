@@ -74,7 +74,6 @@
 				<th>MOVIE TYPE</th>
 				<th>THEATERS</th>
 				<th>SEATS</th>
-				<th>SHOW TIME</th>
 				<th>BOOK</th> 
   			</tr>
   			
@@ -108,7 +107,7 @@
 					</td>	
 					<td><input class="seat" type="number" name="seat" min="1" max="100" required/></td>
 					
-					<td>
+					<%-- <td>
 					<div class="styled-select green rounded">
 					<select class="showtimes" name="shows" >
 						<option>SHOWS</option>
@@ -118,7 +117,7 @@
 					</c:forEach>
 					</select>
 					</div>
-					</td>
+					</td> --%>
 					
 					<td><input type="submit" class="button button2" value="Confirm"/></td>
 					</tr>
