@@ -117,6 +117,7 @@
 			</table>
 			
 				<br>
+				<br>
 				<input class="button button2" id="testprice" type="submit" name="button" value="Proceed" />
 		</form>
 	</div>

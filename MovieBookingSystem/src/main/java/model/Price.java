@@ -97,4 +97,11 @@ public class Price implements IStorable {
 		return this;
 	}
 
+	@Override
+	public String toString() {
+		return "Price [priceId=" + priceId + ", price=" + price + ", isPeakRate=" + isPeakRate + ", isDiscounted="
+				+ isDiscounted + ", isEnhanced=" + isEnhanced + "]";
+	}
+	
+
 }

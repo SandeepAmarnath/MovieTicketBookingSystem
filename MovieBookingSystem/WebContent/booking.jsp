@@ -61,45 +61,44 @@
 		
 	<div class="movieborder">
 		
-		<form method="" action = "">
+		<form method="POST" action = "userbooking">
 			<table>
 				<tr>
 					<td>Username</td>
-					<td>${username}</td>
+					<td><input name="username" type="hidden" value="${username}"/>${username}</td>
 				</tr>
 				<tr>
 					<td>Movie</td>
-					<td>${movie}</td>
+					<td><input name="movie" type="hidden" value="${movie}"/>${movie}</td>
 				</tr>
 				<tr>
 					<td>Theater</td>
-					<td>${theatre}</td>
+					<td><input name="theatre" type="hidden" value="${theatre}"/>${theatre}</td>
 				</tr>
 				<tr>
 					<td>Seats</td>
-					<td>${seats}</td>
+					<td><input name="seats" type="hidden" value="${seats}"/>${seats}</td>
 				</tr>
 				
 				<tr>
 					<td>Show Time</td>
-					<td>${showtimes}</td>
+					<td><input name="showtimes" type="hidden" value="${showtimes}"/>${showtimes}</td>
 				</tr>
 				
 				<tr>
 					<td>Type</td>
-					<td>${priceType}</td>
+					<td><input name="priceType" type="hidden" value="${priceType}"/>${priceType}</td>
 				</tr>
 				
 				<tr>
 					<td>Price</td>	
-					<td>${cp}</td>	
+					<td><input name="price" type="hidden" value="${cp}"/>${cp}</td>	
 				</tr>
-									
-				
-				
-				
-				
 			</table>
+			
+			<br>
+			<br>
+				<input class="button button2" id="testprice" type="submit" name="button" value="Book" />
 		</form>
 	</div>
 		

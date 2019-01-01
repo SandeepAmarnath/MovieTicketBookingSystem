@@ -43,6 +43,8 @@ public class TestBookingServlet extends HttpServlet {
 		String showtimes = request.getParameter("shows");
 		String priceType = request.getParameter("priceType");
 		System.out.println(priceType+" is the priceType");
+		String username = request.getParameter("username");
+		System.out.println(username + " is the username");
 		Character typeOfPrice = 'T';
 		
 		System.err.println("Price "+ typeOfPrice+"   "+" it is "+priceType);
