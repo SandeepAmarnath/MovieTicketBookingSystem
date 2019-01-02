@@ -85,7 +85,17 @@ public class UserBooking extends HttpServlet {
 		IBookingDao bookingDao = DaoFactory.getBookingDao();
 		bookingDao.create(booking);
 		
-		System.out.println("Success");
+		
+		request.setAttribute("username", username);
+		request.setAttribute("movie",movie);
+		request.setAttribute("theatre",theatre);
+		request.setAttribute("seats",seats);
+		request.setAttribute("showtimes",showtimes);
+		request.setAttribute("price",price);
+		request.setAttribute("priceType",priceType);
+		
+		request.getRequestDispatcher("userBookingInfo.jsp").forward(request, response);
+		
 	}
 
 }

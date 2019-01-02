@@ -68,10 +68,10 @@ public class BookingBusinessLogic {
 		
 		for (Object[] objects : all) {
 			ArrayList<String> strArray = new ArrayList<String>();
-			System.err.println((BigDecimal)objects[0]+ "        "+"         "+(BigDecimal)objects[1]+"   "
-					+ "   "+(BigDecimal)objects[2]+"           "+ (BigDecimal)objects[3]+ "         "
-					+ "    "+(Timestamp)objects[4]+"         "+(String)objects[5]+"         "
-					+ "  "+(String)objects[6]+"           "+(BigDecimal)objects[7]);
+//			System.err.println((BigDecimal)objects[0]+ "        "+"         "+(BigDecimal)objects[1]+"   "
+//					+ "   "+(BigDecimal)objects[2]+"           "+ (BigDecimal)objects[3]+ "         "
+//					+ "    "+(Timestamp)objects[4]+"         "+(String)objects[5]+"         "
+//					+ "  "+(String)objects[6]+"           "+(BigDecimal)objects[7]);
 			
 			theatreId = ((BigDecimal)objects[0]).intValue();
 			movieId = ((BigDecimal)objects[1]).intValue();
@@ -86,7 +86,6 @@ public class BookingBusinessLogic {
 		
 		MovieJpaDao mDao = new MovieJpaDao();
 		return mDao.readby(movieId);
-//		System.out.println(mDao.readby(movieId));
 
 	}
 
@@ -94,21 +93,18 @@ public class BookingBusinessLogic {
 		
 		TheatreJpaDao tDao = new TheatreJpaDao();
 		return tDao.readby(theatreId);
-//		System.out.println(tDao.readby(theatreId));
 	}
 	
 	public Price getPrice() {
 		
 		PriceJpaDao pDao = new PriceJpaDao();
 		return pDao.readby(priceId);
-//		System.out.println(pDao.readby(priceId));
 	}
 	
 	public Show getShow() {
 		
 		ShowJpaDao sDao = new ShowJpaDao();
 		return sDao.readby(showId);
-//		System.out.println(sDao.readby(showId));
 	}
 	
 	public Customer getUser() {
